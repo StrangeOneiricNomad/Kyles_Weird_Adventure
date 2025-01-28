@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3os2i84m61ap"]
+
+[ext_resource type="PackedScene" uid="uid://0xk5lwl7giir" path="res://Scenes/kyle.tscn" id="1_5vggq"]
+[ext_resource type="PackedScene" uid="uid://736pi17u21h2" path="res://Debug Objects/test_ground.tscn" id="2_65dq2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Kyle" parent="." instance=ExtResource("1_5vggq")]
+position = Vector2(490, 144)
+
+[node name="TestGround" parent="." instance=ExtResource("2_65dq2")]
+position = Vector2(602, 388)
