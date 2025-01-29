@@ -1,0 +1,4 @@
+name/Architester\
+
+/p[test1] this is test dialog /n
+/p[test2] isint that great?

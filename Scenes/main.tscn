@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ru2kwdipg1nf"]
+[gd_scene load_steps=5 format=3 uid="uid://ru2kwdipg1nf"]
 
 [ext_resource type="PackedScene" uid="uid://0xk5lwl7giir" path="res://Scenes/kyle.tscn" id="1_3ep1c"]
 [ext_resource type="PackedScene" uid="uid://ci3nsgbg634mt" path="res://Scenes/hud.tscn" id="2_uv2bj"]
 [ext_resource type="PackedScene" uid="uid://5ptbwokhhe0l" path="res://Scenes/interactable.tscn" id="3_m4ghq"]
+[ext_resource type="Resource" uid="uid://csgcf36x7drmo" path="res://Scripts/Custom Resources/TestText.tres" id="4_xp4un"]
 
 [node name="Main" type="Node"]
 
@@ -13,5 +14,9 @@ position = Vector2(710, 327)
 
 [node name="Interactable" parent="." instance=ExtResource("3_m4ghq")]
 position = Vector2(390, 216)
+text_file = ExtResource("4_xp4un")
 
+[connection signal="disableMovement" from="HUD" to="Kyle" method="_on_hud_disable_movement"]
+[connection signal="enableMovement" from="HUD" to="Kyle" method="_on_hud_enable_movement"]
+[connection signal="justEndedDialog" from="HUD" to="Interactable" method="_on_hud_just_ended_dialog"]
 [connection signal="open_dialog" from="Interactable" to="HUD" method="_on_interactable_open_dialog"]

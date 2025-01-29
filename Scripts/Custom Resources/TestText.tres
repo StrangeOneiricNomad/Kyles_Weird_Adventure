@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="textFile" load_steps=4 format=3 uid="uid://csgcf36x7drmo"]
+
+[ext_resource type="Script" path="res://Scripts/Custom Resources/text_resource_class.gd" id="1_esre4"]
+[ext_resource type="Texture2D" uid="uid://dc2m4x6hesjlk" path="res://Art/pfp/testPfphappy.png" id="1_vljqi"]
+[ext_resource type="Texture2D" uid="uid://512ttkbsfnqp" path="res://Art/pfp/TestpfpNeutral.png" id="2_idh5l"]
+
+[resource]
+script = ExtResource("1_esre4")
+speaker_name = Array[String](["\"Archibald\"", "\"Archibald\""])
+pages = Array[String](["\"This Is test Dialog\"", "\"Isint that Great?\""])
+pfp = Array[Texture2D]([ExtResource("1_vljqi"), ExtResource("2_idh5l")])

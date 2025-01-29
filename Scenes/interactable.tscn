@@ -16,5 +16,8 @@ texture = ExtResource("1_btykd")
 position = Vector2(-0.5, 28)
 shape = SubResource("RectangleShape2D_h6oqs")
 
+[node name="EndInteractionTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

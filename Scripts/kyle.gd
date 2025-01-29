@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 
+var moveDisabled : bool = false
+
 @export var walkSpeed : float = 100.0
 @export var runSpeed : float = 200.0
 var collider
@@ -41,8 +43,19 @@ func _physics_process(delta: float) -> void:
 	 
 	#print("X = " + str(velocity.x))
 	#print(" = " + str(velocity.y))
-	move_and_slide()
+	
+	if ! moveDisabled:
+		move_and_slide()
 	
 	
 	
 	
+
+
+
+func _on_hud_enable_movement() -> void:
+	moveDisabled = false
+
+
+func _on_hud_disable_movement() -> void:
+	moveDisabled = true
