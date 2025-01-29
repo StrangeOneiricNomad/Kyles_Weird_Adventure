@@ -3,6 +3,7 @@ extends Node
 @export var text_file : Resource
 var player = null
 var dialogOpen : bool
+var hud
 
 signal interact
 signal open_dialog
@@ -11,7 +12,9 @@ signal open_dialog
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	dialogOpen = false
-	
+	hud = get_node("../HUD")
+	hud.justEndedDialog.connect(func():
+		$EndInteractionTimer.start())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

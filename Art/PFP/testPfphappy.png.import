@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://512ttkbsfnqp"
-path="res://.godot/imported/TestpfpNeutral.png-4d3d504a30df731406f700767cefb1bd.ctex"
+uid="uid://dc2m4x6hesjlk"
+path="res://.godot/imported/testPfphappy.png-a78cdc99f359035efb90f7328ca13fd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/pfp/TestpfpNeutral.png"
-dest_files=["res://.godot/imported/TestpfpNeutral.png-4d3d504a30df731406f700767cefb1bd.ctex"]
+source_file="res://Art/PFP/testPfphappy.png"
+dest_files=["res://.godot/imported/testPfphappy.png-a78cdc99f359035efb90f7328ca13fd1.ctex"]
 
 [params]
 

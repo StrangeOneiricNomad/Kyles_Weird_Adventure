@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci3nsgbg634mt"]
+[gd_scene load_steps=6 format=3 uid="uid://ci3nsgbg634mt"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_j1fw1"]
-[ext_resource type="Texture2D" uid="uid://hgrlpc5rkisd" path="res://Art/Text Box.png" id="1_s23rf"]
+[ext_resource type="Texture2D" uid="uid://hgrlpc5rkisd" path="res://Art/UI/Text Box.png" id="1_s23rf"]
 [ext_resource type="Script" path="res://Scenes/dialog_box.gd" id="3_0qpfk"]
 [ext_resource type="Script" path="res://Scenes/pfp_index.gd" id="3_rkcek"]
+[ext_resource type="Texture2D" uid="uid://blvl3ilstak4t" path="res://Art/UI/InventorBox.png" id="5_fg2o7"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_j1fw1")
@@ -43,20 +44,61 @@ anchor_bottom = 0.933
 offset_left = -0.12
 offset_top = 4.0
 offset_right = 0.119995
-offset_bottom = 0.0599976
+offset_bottom = 6.06
 
 [node name="Speaker Name" type="Label" parent="DialogBox"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.407
 anchor_bottom = 1.0
-offset_left = 302.0
-offset_top = 100.0
-offset_right = -19.96
-offset_bottom = -13.0
+offset_left = 293.0
+offset_top = 6.0
+offset_right = -28.96
+offset_bottom = -107.0
+theme_override_font_sizes/font_size = 20
 
 [node name="PfpIndex" type="Node" parent="DialogBox"]
 script = ExtResource("3_rkcek")
+
+[node name="Inventory" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.802
+anchor_top = 0.004
+anchor_right = 1.002
+anchor_bottom = 0.36
+offset_left = 0.439941
+offset_top = 0.12
+offset_right = 0.439941
+offset_bottom = -0.200012
+texture = ExtResource("5_fg2o7")
+
+[node name="Item1" type="TextureRect" parent="Inventory"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 127.0
+offset_bottom = 127.0
+
+[node name="Item2" type="TextureRect" parent="Inventory"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 1.0
+offset_right = 255.0
+offset_bottom = 128.0
+
+[node name="Item3" type="TextureRect" parent="Inventory"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 129.0
+offset_right = 127.0
+offset_bottom = 255.0
+
+[node name="Item4" type="TextureRect" parent="Inventory"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 128.0
+offset_right = 254.0
+offset_bottom = 255.0
 
 [connection signal="startDialogue" from="." to="DialogBox" method="_on_hud_start_dialogue"]
 [connection signal="endDialog" from="DialogBox" to="." method="_on_dialog_box_end_dialog"]

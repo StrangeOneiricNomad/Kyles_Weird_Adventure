@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc2m4x6hesjlk"
-path="res://.godot/imported/testPfphappy.png-dbb96294125c5ea7ee5698262bd5e7c2.ctex"
+uid="uid://hgrlpc5rkisd"
+path="res://.godot/imported/Text Box.png-0811a362cd6221f0316b9c31c0481091.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/pfp/testPfphappy.png"
-dest_files=["res://.godot/imported/testPfphappy.png-dbb96294125c5ea7ee5698262bd5e7c2.ctex"]
+source_file="res://Art/UI/Text Box.png"
+dest_files=["res://.godot/imported/Text Box.png-0811a362cd6221f0316b9c31c0481091.ctex"]
 
 [params]
 

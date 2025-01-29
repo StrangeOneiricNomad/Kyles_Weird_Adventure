@@ -1,8 +1,13 @@
 extends CanvasLayer
 
 
+
+
+
+var enemies
 var dialogOpen : bool
 var dialogBox
+var inventory
 var textResource
 signal startDialogue
 signal endDialogue
@@ -16,8 +21,19 @@ signal enableMovement
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	inventory = $Inventory
 	dialogBox = $DialogBox
 	dialogBox.hide()
+	enemies = get_tree().get_nodes_in_group("Interactables")
+	for enemy in enemies:
+		enemy.open_dialog.connect(func(text_file):
+			if dialogOpen == false:
+				dialogOpen = true
+				emit_signal("startDialogue", text_file)
+				dialogBox.show()
+				emit_signal("disableMovement"))
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

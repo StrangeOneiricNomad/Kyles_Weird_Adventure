@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="textFile" load_steps=3 format=3 uid="uid://ydx8xofe74em"]
+
+[ext_resource type="Script" path="res://Scripts/Custom Resources/text_resource_class.gd" id="1_15a31"]
+[ext_resource type="Texture2D" uid="uid://qykbejnr387w" path="res://Art/Sprites/icon.svg" id="1_nrfr8"]
+
+[resource]
+script = ExtResource("1_15a31")
+speaker_name = Array[String](["THE Godot", "THE Godot", "THE Godot"])
+pages = Array[String](["You did it", "Your 1337 hacker skills saved me from oblivion", "im so proud of you!"])
+pfp = Array[Texture2D]([ExtResource("1_nrfr8"), ExtResource("1_nrfr8"), ExtResource("1_nrfr8")])

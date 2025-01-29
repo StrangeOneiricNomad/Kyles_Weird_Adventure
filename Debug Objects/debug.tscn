@@ -1,18 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bsuith277wtgw"]
+[gd_scene load_steps=6 format=3 uid="uid://bsuith277wtgw"]
 
 [ext_resource type="Script" path="res://Scripts/test_controller.gd" id="1_jy6tj"]
-[ext_resource type="Texture2D" uid="uid://qykbejnr387w" path="res://Art/icon.svg" id="2_mqnce"]
+[ext_resource type="Texture2D" uid="uid://qykbejnr387w" path="res://Art/Sprites/icon.svg" id="2_mqnce"]
 [ext_resource type="PackedScene" uid="uid://736pi17u21h2" path="res://Debug Objects/test_ground.tscn" id="3_h22vp"]
-[ext_resource type="Script" path="res://Scripts/raycast_test.gd" id="3_sbqi0"]
+[ext_resource type="Script" path="res://Debug Objects/test_ground.gd" id="4_tcd7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_phau3"]
 size = Vector2(121, 127)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6hom"]
-size = Vector2(125, 125)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8dme"]
-size = Vector2(184, 175)
 
 [node name="Debug" type="Node2D"]
 
@@ -29,33 +23,4 @@ position = Vector2(-2.5, -0.5)
 shape = SubResource("RectangleShape2D_phau3")
 
 [node name="TestGround" parent="." instance=ExtResource("3_h22vp")]
-
-[node name="RaycastTest" type="StaticBody2D" parent="."]
-position = Vector2(117, 362)
-script = ExtResource("3_sbqi0")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="RaycastTest"]
-texture = ExtResource("2_mqnce")
-flip_v = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RaycastTest"]
-position = Vector2(-2.5, -1.5)
-shape = SubResource("RectangleShape2D_c6hom")
-
-[node name="RayCast" type="RayCast2D" parent="RaycastTest"]
-target_position = Vector2(225, 0)
-collide_with_areas = true
-
-[node name="TestArea" type="Area2D" parent="."]
-position = Vector2(149, 145)
-rotation = 3.1449
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestArea"]
-rotation = 2.20486
-texture = ExtResource("2_mqnce")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestArea"]
-position = Vector2(-9, -7.5)
-shape = SubResource("RectangleShape2D_e8dme")
+script = ExtResource("4_tcd7n")

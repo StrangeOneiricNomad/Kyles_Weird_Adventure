@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hgrlpc5rkisd"
-path="res://.godot/imported/Text Box.png-57d7b29e1560826cf74c303259eb675c.ctex"
+uid="uid://blvl3ilstak4t"
+path="res://.godot/imported/InventorBox.png-3848499fb6368eac0c3cfbea4a2d06d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Text Box.png"
-dest_files=["res://.godot/imported/Text Box.png-57d7b29e1560826cf74c303259eb675c.ctex"]
+source_file="res://Art/UI/InventorBox.png"
+dest_files=["res://.godot/imported/InventorBox.png-3848499fb6368eac0c3cfbea4a2d06d4.ctex"]
 
 [params]
 
